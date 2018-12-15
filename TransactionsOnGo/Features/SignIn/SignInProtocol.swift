@@ -13,26 +13,19 @@ typealias FailureHandler = (_ errorMessage: String) -> Void
 protocol SignInViewProtocol {
     var presenter: SignInPresenterProtocol? { get set }
     
+    func showErrorMessage(_ message: String)
 }
 
 protocol SignInWireframeProtocol {
     var presenter: SignInPresenterProtocol? { get set }
     
     static func presentSignInModule(inWindow window: UIWindow)
-    func presentTransactionListModule(_ transactions: [Transaction]?)
+    func presentTransactionListModule()
 }
 
 protocol SignInPresenterProtocol {
     var view: SignInViewProtocol? { get set }
-    var interactor: SignInInteractorProtocol? { get set }
     var wireframe: SignInWireframeProtocol? { get set }
     
-    func logInButtonClicked(_ username: String?, _ password: String?)
-}
-
-protocol SignInInteractorProtocol {
-    var presenter: SignInPresenterProtocol? { get set }
-    
-    func authenticateUser(_ username: String?, _ password: String?) -> Bool
-    func getTransactions(completion: @escaping ([Transaction]) -> Void, onError: @escaping FailureHandler)
+    func signInButtonClicked(_ username: String?, _ password: String?)
 }

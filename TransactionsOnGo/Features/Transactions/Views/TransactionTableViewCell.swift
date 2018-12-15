@@ -13,8 +13,12 @@ class TransactionTableViewCell: UITableViewCell {
     @IBOutlet var beneficiaryLabel: UILabel!
     @IBOutlet var amountLabel: UILabel!
     
-    func configureCell(_ transaction: Transaction) {
+    func configureCell(_ transaction: Transaction?) {
+        guard let transaction = transaction else {
+            return
+        }
+        
         beneficiaryLabel.text = transaction.beneficiary
-        amountLabel.text = transaction.amount
+        amountLabel.text = transaction.amountSent
     }
 }

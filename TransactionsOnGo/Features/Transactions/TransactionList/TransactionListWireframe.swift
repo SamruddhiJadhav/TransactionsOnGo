@@ -9,19 +9,30 @@
 import UIKit
 
 class TransactionListWireframe: TransactionListWireframeProtocol {
+    
+    // MARK: - TransactionListWireframeProtocol Variable
     var presenter: TransactionListPresenterProtocol?
     
-    static func presentTransactionListModule(fromView vc: UIViewController, _ transactions: [Transaction]) {
-        let view = TransactionListWireframe.instantiate()
+    // MARK: - TransactionListWireframe Constants
+    static let STORYBOARD_ID = "Transactions"
+    static let STORYBOARD_VIEW_ID = "TransactionListView"
+    
+    // MARK: - TransactionListWireframeProtocol Methods
+    static func presentTransactionListModule(fromView vc: UIViewController) {
+        let view: TransactionListView = StoryboardUtil.instantiateView(TransactionListWireframe.STORYBOARD_ID,
+                                                                       TransactionListWireframe.STORYBOARD_VIEW_ID)
         let presenter = TransactionListPresenter()
         let wireframe = TransactionListWireframe()
+        let interactor = TransactionListInteractor()
         
         view.presenter = presenter
         presenter.view = view
         presenter.wireframe = wireframe
+        presenter.interactor = interactor
+        interactor.presenter = presenter
         wireframe.presenter = presenter
         
-        presenter.transactions = transactions
+        interactor.transactionService = TransactionServices()
         
         vc.navigationController?.pushViewController(view, animated: true)
     }
@@ -30,13 +41,14 @@ class TransactionListWireframe: TransactionListWireframeProtocol {
         guard let view = presenter?.view as? UIViewController else {
             return
         }
-        TransactionDetailWireframe.presentTransactionDetailModule(fromView: view, transaction)
+        TransactionDetailWireframe.presentTransactionDetailModule(fromView: view,
+                                                                  transaction)
     }
     
-    static func instantiate() -> TransactionListView {
-        guard let view = UIStoryboard(name: "Transactions", bundle: nil).instantiateViewController(withIdentifier: "TransactionListView") as? TransactionListView else {
-            fatalError("Failed to initaite!")
+    func popViewController() {
+        guard let view = presenter?.view as? UIViewController else {
+            return
         }
-        return view
+        view.navigationController?.popViewController(animated: true)
     }
 }

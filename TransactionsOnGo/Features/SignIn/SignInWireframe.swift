@@ -9,46 +9,39 @@
 import UIKit
 
 class SignInWireframe: SignInWireframeProtocol {
+    
+    // MARK: - SignInWireframeProtocol Variable
     var presenter: SignInPresenterProtocol?
     
+    // MARK: - SignInWireframe Constants
+    static let STORYBOARD_ID = "SignIn"
+    static let STORYBOARD_VIEW_ID = "SignInView"
+    static let STORYBOARD_NAVIGATION_VIEW_ID = "navigationController"
+    
+    // MARK: - SignInWireframeProtocol methods
     static func presentSignInModule(inWindow window: UIWindow) {
-        let view = SignInWireframe.instantiate()
+        let view: SignInView = StoryboardUtil.instantiateView(SignInWireframe.STORYBOARD_ID,
+                                                              SignInWireframe.STORYBOARD_VIEW_ID)
         let presenter = SignInPresenter()
-        let interactor = SignInInteractor()
         let wireframe = SignInWireframe()
         
         view.presenter = presenter
         presenter.view = view
-        presenter.interactor = interactor
         presenter.wireframe = wireframe
-        interactor.presenter = presenter
         wireframe.presenter = presenter
         
-        let rootNavigationController = SignInWireframe.instantiateNavigationController()
+        let rootNavigationController = StoryboardUtil.instantiateNavigationView(SignInWireframe.STORYBOARD_ID,
+                                                                                SignInWireframe.STORYBOARD_NAVIGATION_VIEW_ID)
         let signInView = view as SignInView
         rootNavigationController.viewControllers = [signInView]
 
         window.rootViewController = rootNavigationController
     }
     
-    func presentTransactionListModule(_ transactions: [Transaction]?) {
+    func presentTransactionListModule() {
         guard let view = presenter?.view as? UIViewController else {
             return
         }
-        TransactionListWireframe.presentTransactionListModule(fromView: view, transactions!)
-    }
-    
-    static func instantiate() -> SignInView {
-        guard let view = UIStoryboard(name: "SignIn", bundle: nil).instantiateViewController(withIdentifier: "SignInView") as? SignInView else {
-            fatalError("Failed to initaite!")
-        }
-        return view
-    }
-    
-    static func instantiateNavigationController() -> UINavigationController {
-        guard let nc = UIStoryboard(name: "SignIn", bundle: nil).instantiateViewController(withIdentifier: "navigationController") as? UINavigationController else {
-            fatalError("Failed to initaite!")
-        }
-        return nc
+        TransactionListWireframe.presentTransactionListModule(fromView: view)
     }
 }

@@ -10,7 +10,6 @@ import UIKit
 
 protocol TransactionDetailViewProtocol {
     var presenter: TransactionDetailPresenterProtocol? { get set }
-    
 }
 
 protocol TransactionDetailWireframeProtocol {

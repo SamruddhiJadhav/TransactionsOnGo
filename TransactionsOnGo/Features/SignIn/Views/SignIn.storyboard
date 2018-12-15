@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -19,36 +18,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launcher" translatesAutoresizingMaskIntoConstraints="NO" id="dGX-tw-I7O">
-                                <rect key="frame" x="162.5" y="75.5" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="DOD-zY-zjh"/>
-                                    <constraint firstAttribute="width" secondItem="dGX-tw-I7O" secondAttribute="height" multiplier="1:1" id="VZC-2J-grc"/>
-                                </constraints>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1Sb-Zh-315">
-                                <rect key="frame" x="40" y="175.5" width="295" height="80"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="1Sb-Zh-315">
+                                <rect key="frame" x="40" y="169.5" width="295" height="85"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EC9-0G-R3u">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="EC9-0G-R3u">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="usernameTextField" label="Username"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="username"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qva-me-BWn">
-                                        <rect key="frame" x="0.0" y="50" width="295" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="password"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Qva-me-BWn">
+                                        <rect key="frame" x="0.0" y="55" width="295" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="passwordTextField" label="Password"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ili-Qz-aFw">
-                                <rect key="frame" x="40" y="285.5" width="295" height="32"/>
+                                <rect key="frame" x="40" y="284.5" width="295" height="34"/>
                                 <color key="backgroundColor" red="1" green="0.75686274509803919" blue="0.027450980392156862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Log In">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" hint="SignIn" identifier="signInButton" label="Sign In"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -56,18 +51,34 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="logInButton:" destination="yjG-Br-gWH" eventType="touchUpInside" id="uFE-Zi-tkv"/>
+                                    <action selector="signInButton:" destination="yjG-Br-gWH" eventType="touchUpInside" id="A7u-zM-nTN"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check Your Transactions, Anywhere, Anytime. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LdE-9M-ENp">
+                                <rect key="frame" x="40" y="122.5" width="295" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.75686274509999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launcher" translatesAutoresizingMaskIntoConstraints="NO" id="dGX-tw-I7O">
+                                <rect key="frame" x="162" y="52.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="DOD-zY-zjh"/>
+                                    <constraint firstAttribute="width" secondItem="dGX-tw-I7O" secondAttribute="height" multiplier="1:1" id="VZC-2J-grc"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.4823529411764706" green="0.12156862745098039" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0Mm-7W-aYL" firstAttribute="trailing" secondItem="1Sb-Zh-315" secondAttribute="trailing" constant="40" id="Gf8-su-NOB"/>
+                            <constraint firstItem="0Mm-7W-aYL" firstAttribute="trailing" secondItem="LdE-9M-ENp" secondAttribute="trailing" constant="40" id="X9u-M3-Vqt"/>
                             <constraint firstItem="ili-Qz-aFw" firstAttribute="top" secondItem="1Sb-Zh-315" secondAttribute="bottom" constant="30" id="XtX-cI-KX1"/>
-                            <constraint firstItem="1Sb-Zh-315" firstAttribute="top" secondItem="dGX-tw-I7O" secondAttribute="bottom" constant="50" id="cKw-Ym-OGN"/>
+                            <constraint firstItem="LdE-9M-ENp" firstAttribute="leading" secondItem="0Mm-7W-aYL" secondAttribute="leading" constant="40" id="e3w-Zd-zUd"/>
                             <constraint firstItem="ili-Qz-aFw" firstAttribute="leading" secondItem="0Mm-7W-aYL" secondAttribute="leading" constant="40" id="gNW-Pw-in1"/>
                             <constraint firstItem="dGX-tw-I7O" firstAttribute="centerX" secondItem="0Mm-7W-aYL" secondAttribute="centerX" id="kUU-7Q-MDo"/>
                             <constraint firstItem="0Mm-7W-aYL" firstAttribute="trailing" secondItem="ili-Qz-aFw" secondAttribute="trailing" constant="40" id="lg9-yI-pg6"/>
+                            <constraint firstItem="LdE-9M-ENp" firstAttribute="top" secondItem="dGX-tw-I7O" secondAttribute="bottom" constant="20" id="qBz-mK-nWO"/>
+                            <constraint firstItem="1Sb-Zh-315" firstAttribute="top" secondItem="LdE-9M-ENp" secondAttribute="bottom" constant="30" id="qqW-j5-wLk"/>
                             <constraint firstItem="ili-Qz-aFw" firstAttribute="centerY" secondItem="0Mm-7W-aYL" secondAttribute="centerY" id="w1Q-F3-xYl"/>
                             <constraint firstItem="1Sb-Zh-315" firstAttribute="leading" secondItem="0Mm-7W-aYL" secondAttribute="leading" constant="40" id="w5L-XR-ZlD"/>
                         </constraints>
@@ -76,6 +87,7 @@
                     <navigationItem key="navigationItem" id="tKU-hl-CpU"/>
                     <connections>
                         <outlet property="passwordTextField" destination="Qva-me-BWn" id="1WO-so-Pjb"/>
+                        <outlet property="signInButton" destination="ili-Qz-aFw" id="20O-PZ-zA6"/>
                         <outlet property="usernameTextField" destination="EC9-0G-R3u" id="g5r-5I-Gd1"/>
                     </connections>
                 </viewController>
@@ -95,7 +107,7 @@
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.4823529411764706" green="0.12156862745098039" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
@@ -110,6 +122,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="launcher" width="50" height="50"/>
+        <image name="Launcher" width="50" height="50"/>
     </resources>
 </document>

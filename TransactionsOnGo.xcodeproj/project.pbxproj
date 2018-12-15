@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		610BFBD921B9A1900021ED8D /* StoryboardUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610BFBD821B9A1900021ED8D /* StoryboardUtil.swift */; };
 		6145131F21B6EF9F001BC415 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145131E21B6EF9F001BC415 /* AppDelegate.swift */; };
 		6145132621B6EF9F001BC415 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6145132521B6EF9F001BC415 /* Assets.xcassets */; };
 		6145132921B6EF9F001BC415 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6145132721B6EF9F001BC415 /* LaunchScreen.storyboard */; };
-		6145133421B6EF9F001BC415 /* TransactionsOnGoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145133321B6EF9F001BC415 /* TransactionsOnGoTests.swift */; };
 		6145133F21B6EF9F001BC415 /* TransactionsOnGoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145133E21B6EF9F001BC415 /* TransactionsOnGoUITests.swift */; };
 		6145135521B6F6C9001BC415 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6145135421B6F6C9001BC415 /* SignIn.storyboard */; };
 		6145135821B708AD001BC415 /* Transactions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6145135721B708AD001BC415 /* Transactions.storyboard */; };
@@ -19,7 +19,6 @@
 		6145135E21B7A5E3001BC415 /* SignInWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145135D21B7A5E3001BC415 /* SignInWireframe.swift */; };
 		6145136021B7A613001BC415 /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145135F21B7A613001BC415 /* SignInPresenter.swift */; };
 		6145136221B7A654001BC415 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145136121B7A654001BC415 /* SignInView.swift */; };
-		6145136421B7A6D1001BC415 /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145136321B7A6D1001BC415 /* SignInInteractor.swift */; };
 		6145136621B7EAEE001BC415 /* TransactionListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145136521B7EAEE001BC415 /* TransactionListProtocol.swift */; };
 		6145136821B7EB10001BC415 /* TransactionListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145136721B7EB10001BC415 /* TransactionListWireframe.swift */; };
 		6145136C21B7EB47001BC415 /* TransactionListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145136B21B7EB47001BC415 /* TransactionListPresenter.swift */; };
@@ -27,9 +26,26 @@
 		6145137121B7F1B7001BC415 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145137021B7F1B7001BC415 /* Transaction.swift */; };
 		6145137421B82BB8001BC415 /* TransactionServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145137321B82BB8001BC415 /* TransactionServices.swift */; };
 		6145137621B84C37001BC415 /* TransactionDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145137521B84C37001BC415 /* TransactionDetailProtocol.swift */; };
-		6145137821B84C57001BC415 /* TransactionDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145137721B84C57001BC415 /* TransactionDetailPresenter.swift */; };
 		6145137A21B84C6B001BC415 /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145137921B84C6B001BC415 /* TransactionDetailView.swift */; };
 		6145137C21B84C7C001BC415 /* TransactionDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145137B21B84C7C001BC415 /* TransactionDetailWireframe.swift */; };
+		618C749621BBFA4F00E28679 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C749521BBFA4F00E28679 /* StringConstants.swift */; };
+		618C749821BC008500E28679 /* TransactionDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C749721BC008500E28679 /* TransactionDetailPresenter.swift */; };
+		618C749D21BC4F6900E28679 /* TransactionListInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C749C21BC4F6900E28679 /* TransactionListInteractorMock.swift */; };
+		618C749F21BC4F8C00E28679 /* TransactionListInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C749E21BC4F8C00E28679 /* TransactionListInteractorTest.swift */; };
+		618C74A321BC4FBB00E28679 /* TransactionListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C74A221BC4FBB00E28679 /* TransactionListPresenterTest.swift */; };
+		618C74A521BC4FD000E28679 /* TransactionListViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C74A421BC4FD000E28679 /* TransactionListViewMock.swift */; };
+		618C74A721BC4FE100E28679 /* TransactionListWireframeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C74A621BC4FE100E28679 /* TransactionListWireframeMock.swift */; };
+		618C74A921BC500200E28679 /* TransactionServicesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C74A821BC500200E28679 /* TransactionServicesMock.swift */; };
+		618C74AB21BC59BE00E28679 /* XCTestExpectation+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C74AA21BC59BE00E28679 /* XCTestExpectation+ext.swift */; };
+		618C74AD21BCBE0300E28679 /* SignInViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C74AC21BCBE0300E28679 /* SignInViewMock.swift */; };
+		618C74AF21BCBE1F00E28679 /* SignInPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C74AE21BCBE1F00E28679 /* SignInPresenterTest.swift */; };
+		618C74B521BCBE6400E28679 /* SignInWireframeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C74B421BCBE6400E28679 /* SignInWireframeMock.swift */; };
+		618C74B721BD144B00E28679 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C74B621BD144B00E28679 /* AppConfiguration.swift */; };
+		618C74BA21BD25C300E28679 /* Transactions.json in Resources */ = {isa = PBXBuildFile; fileRef = 618C74B921BD25C300E28679 /* Transactions.json */; };
+		61D137C421BD955C00104A18 /* UIWindow+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D137C321BD955C00104A18 /* UIWindow+ext.swift */; };
+		61D137C621BDA05D00104A18 /* UIViewController+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D137C521BDA05D00104A18 /* UIViewController+ext.swift */; };
+		61D8F28521BAEB1100C7A523 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D8F28421BAEB1100C7A523 /* ReachabilityManager.swift */; };
+		61D8F28721BB028B00C7A523 /* TransactionListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D8F28621BB028B00C7A523 /* TransactionListInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,13 +66,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		610BFBD821B9A1900021ED8D /* StoryboardUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardUtil.swift; sourceTree = "<group>"; };
 		6145131B21B6EF9F001BC415 /* TransactionsOnGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransactionsOnGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6145131E21B6EF9F001BC415 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6145132521B6EF9F001BC415 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6145132821B6EF9F001BC415 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6145132A21B6EF9F001BC415 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6145132F21B6EF9F001BC415 /* TransactionsOnGoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransactionsOnGoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6145133321B6EF9F001BC415 /* TransactionsOnGoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsOnGoTests.swift; sourceTree = "<group>"; };
 		6145133521B6EF9F001BC415 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6145133A21B6EF9F001BC415 /* TransactionsOnGoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransactionsOnGoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6145133E21B6EF9F001BC415 /* TransactionsOnGoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsOnGoUITests.swift; sourceTree = "<group>"; };
@@ -68,7 +84,6 @@
 		6145135D21B7A5E3001BC415 /* SignInWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWireframe.swift; sourceTree = "<group>"; };
 		6145135F21B7A613001BC415 /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
 		6145136121B7A654001BC415 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		6145136321B7A6D1001BC415 /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
 		6145136521B7EAEE001BC415 /* TransactionListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListProtocol.swift; sourceTree = "<group>"; };
 		6145136721B7EB10001BC415 /* TransactionListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListWireframe.swift; sourceTree = "<group>"; };
 		6145136B21B7EB47001BC415 /* TransactionListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListPresenter.swift; sourceTree = "<group>"; };
@@ -76,9 +91,26 @@
 		6145137021B7F1B7001BC415 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		6145137321B82BB8001BC415 /* TransactionServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionServices.swift; sourceTree = "<group>"; };
 		6145137521B84C37001BC415 /* TransactionDetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailProtocol.swift; sourceTree = "<group>"; };
-		6145137721B84C57001BC415 /* TransactionDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailPresenter.swift; sourceTree = "<group>"; };
 		6145137921B84C6B001BC415 /* TransactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailView.swift; sourceTree = "<group>"; };
 		6145137B21B84C7C001BC415 /* TransactionDetailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailWireframe.swift; sourceTree = "<group>"; };
+		618C749521BBFA4F00E28679 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		618C749721BC008500E28679 /* TransactionDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailPresenter.swift; sourceTree = "<group>"; };
+		618C749C21BC4F6900E28679 /* TransactionListInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListInteractorMock.swift; sourceTree = "<group>"; };
+		618C749E21BC4F8C00E28679 /* TransactionListInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListInteractorTest.swift; sourceTree = "<group>"; };
+		618C74A221BC4FBB00E28679 /* TransactionListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListPresenterTest.swift; sourceTree = "<group>"; };
+		618C74A421BC4FD000E28679 /* TransactionListViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewMock.swift; sourceTree = "<group>"; };
+		618C74A621BC4FE100E28679 /* TransactionListWireframeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListWireframeMock.swift; sourceTree = "<group>"; };
+		618C74A821BC500200E28679 /* TransactionServicesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionServicesMock.swift; sourceTree = "<group>"; };
+		618C74AA21BC59BE00E28679 /* XCTestExpectation+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestExpectation+ext.swift"; sourceTree = "<group>"; };
+		618C74AC21BCBE0300E28679 /* SignInViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewMock.swift; sourceTree = "<group>"; };
+		618C74AE21BCBE1F00E28679 /* SignInPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenterTest.swift; sourceTree = "<group>"; };
+		618C74B421BCBE6400E28679 /* SignInWireframeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWireframeMock.swift; sourceTree = "<group>"; };
+		618C74B621BD144B00E28679 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		618C74B921BD25C300E28679 /* Transactions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Transactions.json; sourceTree = "<group>"; };
+		61D137C321BD955C00104A18 /* UIWindow+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+ext.swift"; sourceTree = "<group>"; };
+		61D137C521BDA05D00104A18 /* UIViewController+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ext.swift"; sourceTree = "<group>"; };
+		61D8F28421BAEB1100C7A523 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
+		61D8F28621BB028B00C7A523 /* TransactionListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +138,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		610BFBDA21B9A1990021ED8D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				610BFBD821B9A1900021ED8D /* StoryboardUtil.swift */,
+				61D8F28421BAEB1100C7A523 /* ReachabilityManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		610BFBE121BA84E60021ED8D /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				618C749521BBFA4F00E28679 /* StringConstants.swift */,
+				618C74B621BD144B00E28679 /* AppConfiguration.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		6145131221B6EF9F001BC415 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +179,7 @@
 		6145131D21B6EF9F001BC415 /* TransactionsOnGo */ = {
 			isa = PBXGroup;
 			children = (
+				610BFBE121BA84E60021ED8D /* Application */,
 				6145134C21B6F4C9001BC415 /* Features */,
 				6145134E21B6F4FC001BC415 /* Shared */,
 				6145134D21B6F4D6001BC415 /* Resources */,
@@ -142,8 +193,10 @@
 		6145133221B6EF9F001BC415 /* TransactionsOnGoTests */ = {
 			isa = PBXGroup;
 			children = (
-				6145133321B6EF9F001BC415 /* TransactionsOnGoTests.swift */,
+				618C749B21BC462400E28679 /* SignIn */,
+				618C749921BC460100E28679 /* TransactionList */,
 				6145133521B6EF9F001BC415 /* Info.plist */,
+				618C74AA21BC59BE00E28679 /* XCTestExpectation+ext.swift */,
 			);
 			path = TransactionsOnGoTests;
 			sourceTree = "<group>";
@@ -177,6 +230,9 @@
 		6145134E21B6F4FC001BC415 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				61D137C221BD953200104A18 /* Extensions */,
+				618C74B821BD258C00E28679 /* Mocks */,
+				610BFBDA21B9A1990021ED8D /* Utils */,
 				6145137221B82B9C001BC415 /* Services */,
 				6145136F21B7F1A4001BC415 /* Entities */,
 			);
@@ -189,7 +245,6 @@
 				6145135321B6F69F001BC415 /* Views */,
 				6145136121B7A654001BC415 /* SignInView.swift */,
 				6145135F21B7A613001BC415 /* SignInPresenter.swift */,
-				6145136321B7A6D1001BC415 /* SignInInteractor.swift */,
 				6145135D21B7A5E3001BC415 /* SignInWireframe.swift */,
 				6145135B21B7A5B9001BC415 /* SignInProtocol.swift */,
 			);
@@ -210,9 +265,9 @@
 			isa = PBXGroup;
 			children = (
 				6145137521B84C37001BC415 /* TransactionDetailProtocol.swift */,
-				6145137721B84C57001BC415 /* TransactionDetailPresenter.swift */,
 				6145137921B84C6B001BC415 /* TransactionDetailView.swift */,
 				6145137B21B84C7C001BC415 /* TransactionDetailWireframe.swift */,
+				618C749721BC008500E28679 /* TransactionDetailPresenter.swift */,
 			);
 			path = TransactionDetails;
 			sourceTree = "<group>";
@@ -224,6 +279,7 @@
 				6145136721B7EB10001BC415 /* TransactionListWireframe.swift */,
 				6145136B21B7EB47001BC415 /* TransactionListPresenter.swift */,
 				6145136D21B7EB57001BC415 /* TransactionListView.swift */,
+				61D8F28621BB028B00C7A523 /* TransactionListInteractor.swift */,
 			);
 			path = TransactionList;
 			sourceTree = "<group>";
@@ -259,6 +315,46 @@
 				6145137321B82BB8001BC415 /* TransactionServices.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		618C749921BC460100E28679 /* TransactionList */ = {
+			isa = PBXGroup;
+			children = (
+				618C749C21BC4F6900E28679 /* TransactionListInteractorMock.swift */,
+				618C749E21BC4F8C00E28679 /* TransactionListInteractorTest.swift */,
+				618C74A221BC4FBB00E28679 /* TransactionListPresenterTest.swift */,
+				618C74A421BC4FD000E28679 /* TransactionListViewMock.swift */,
+				618C74A621BC4FE100E28679 /* TransactionListWireframeMock.swift */,
+				618C74A821BC500200E28679 /* TransactionServicesMock.swift */,
+			);
+			path = TransactionList;
+			sourceTree = "<group>";
+		};
+		618C749B21BC462400E28679 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				618C74AC21BCBE0300E28679 /* SignInViewMock.swift */,
+				618C74AE21BCBE1F00E28679 /* SignInPresenterTest.swift */,
+				618C74B421BCBE6400E28679 /* SignInWireframeMock.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		618C74B821BD258C00E28679 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				618C74B921BD25C300E28679 /* Transactions.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		61D137C221BD953200104A18 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				61D137C321BD955C00104A18 /* UIWindow+ext.swift */,
+				61D137C521BDA05D00104A18 /* UIViewController+ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6145135521B6F6C9001BC415 /* SignIn.storyboard in Resources */,
+				618C74BA21BD25C300E28679 /* Transactions.json in Resources */,
 				6145132921B6EF9F001BC415 /* LaunchScreen.storyboard in Resources */,
 				6145132621B6EF9F001BC415 /* Assets.xcassets in Resources */,
 				6145135821B708AD001BC415 /* Transactions.storyboard in Resources */,
@@ -396,20 +493,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				610BFBD921B9A1900021ED8D /* StoryboardUtil.swift in Sources */,
 				6145136021B7A613001BC415 /* SignInPresenter.swift in Sources */,
+				618C749821BC008500E28679 /* TransactionDetailPresenter.swift in Sources */,
 				6145136221B7A654001BC415 /* SignInView.swift in Sources */,
 				6145137421B82BB8001BC415 /* TransactionServices.swift in Sources */,
+				61D137C621BDA05D00104A18 /* UIViewController+ext.swift in Sources */,
 				6145136C21B7EB47001BC415 /* TransactionListPresenter.swift in Sources */,
 				6145135C21B7A5B9001BC415 /* SignInProtocol.swift in Sources */,
 				6145136821B7EB10001BC415 /* TransactionListWireframe.swift in Sources */,
+				618C749621BBFA4F00E28679 /* StringConstants.swift in Sources */,
 				6145137121B7F1B7001BC415 /* Transaction.swift in Sources */,
 				6145136E21B7EB57001BC415 /* TransactionListView.swift in Sources */,
 				6145137C21B84C7C001BC415 /* TransactionDetailWireframe.swift in Sources */,
-				6145137821B84C57001BC415 /* TransactionDetailPresenter.swift in Sources */,
-				6145136421B7A6D1001BC415 /* SignInInteractor.swift in Sources */,
+				618C74B721BD144B00E28679 /* AppConfiguration.swift in Sources */,
+				61D137C421BD955C00104A18 /* UIWindow+ext.swift in Sources */,
+				61D8F28521BAEB1100C7A523 /* ReachabilityManager.swift in Sources */,
 				6145136621B7EAEE001BC415 /* TransactionListProtocol.swift in Sources */,
 				6145137A21B84C6B001BC415 /* TransactionDetailView.swift in Sources */,
 				6145135E21B7A5E3001BC415 /* SignInWireframe.swift in Sources */,
+				61D8F28721BB028B00C7A523 /* TransactionListInteractor.swift in Sources */,
 				6145131F21B6EF9F001BC415 /* AppDelegate.swift in Sources */,
 				6145137621B84C37001BC415 /* TransactionDetailProtocol.swift in Sources */,
 				6145135A21B7A3AC001BC415 /* TransactionTableViewCell.swift in Sources */,
@@ -420,7 +523,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6145133421B6EF9F001BC415 /* TransactionsOnGoTests.swift in Sources */,
+				618C74A721BC4FE100E28679 /* TransactionListWireframeMock.swift in Sources */,
+				618C749D21BC4F6900E28679 /* TransactionListInteractorMock.swift in Sources */,
+				618C74B521BCBE6400E28679 /* SignInWireframeMock.swift in Sources */,
+				618C74A521BC4FD000E28679 /* TransactionListViewMock.swift in Sources */,
+				618C74A921BC500200E28679 /* TransactionServicesMock.swift in Sources */,
+				618C74A321BC4FBB00E28679 /* TransactionListPresenterTest.swift in Sources */,
+				618C74AB21BC59BE00E28679 /* XCTestExpectation+ext.swift in Sources */,
+				618C74AD21BCBE0300E28679 /* SignInViewMock.swift in Sources */,
+				618C74AF21BCBE1F00E28679 /* SignInPresenterTest.swift in Sources */,
+				618C749F21BC4F8C00E28679 /* TransactionListInteractorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,7 +619,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -558,7 +670,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -574,7 +686,7 @@
 				DEVELOPMENT_TEAM = WAT4Q34R37;
 				INFOPLIST_FILE = TransactionsOnGo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mobile.TransactionsOnGo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobile.transactionsOnGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -589,7 +701,7 @@
 				DEVELOPMENT_TEAM = WAT4Q34R37;
 				INFOPLIST_FILE = TransactionsOnGo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mobile.TransactionsOnGo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobile.transactionsOnGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

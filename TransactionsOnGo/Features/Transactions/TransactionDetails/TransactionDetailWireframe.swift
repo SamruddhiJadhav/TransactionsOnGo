@@ -9,24 +9,26 @@
 import UIKit
 
 class TransactionDetailWireframe: TransactionDetailWireframeProtocol {
+    
+    // MARK: - TransactionDetailWireframeProtocol Variable
     var presenter: TransactionDetailPresenterProtocol?
     
+    // MARK: - TransactionDetailWireframe Constants
+    static let STORYBOARD_ID = "Transactions"
+    static let STORYBOARD_VIEW_ID = "TransactionDetailView"
+    
+    // MARK: - TransactionDetailWireframeProtocol Method
     static func presentTransactionDetailModule(fromView vc: UIViewController, _ transaction: Transaction) {
-        let view = TransactionDetailWireframe.instantiate()
+        let view: TransactionDetailView = StoryboardUtil.instantiateView(TransactionDetailWireframe.STORYBOARD_ID,
+                                                                         TransactionDetailWireframe.STORYBOARD_VIEW_ID)
         let presenter = TransactionDetailPresenter()
         let wireframe = TransactionDetailWireframe()
         
-        view.presenter = presenter
         presenter.wireframe = wireframe
         presenter.view = view
+        view.presenter = presenter
         presenter.transaction = transaction
+        
         vc.navigationController?.pushViewController(view, animated: true)
-    }
-    
-    static func instantiate() -> TransactionDetailView {
-        guard let view = UIStoryboard(name: "Transactions", bundle: nil).instantiateViewController(withIdentifier: "TransactionDetailView") as? TransactionDetailView else {
-            fatalError("Failed to initaite!")
-        }
-        return view
     }
 }

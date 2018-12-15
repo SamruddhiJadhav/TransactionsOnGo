@@ -12,7 +12,8 @@ struct Transaction {
     var transactionId: String?
     var beneficiary: String?
     var date: String?
-    var amount: String?
+    var amountSent: String?
+    var amountReceived: String?
     var status: String?
     var rate: String?
     var timeTaken: String?
@@ -22,7 +23,8 @@ struct Transaction {
         transactionId = jsonDict["transactionId"] as? String
         beneficiary = jsonDict["beneficiary"] as? String
         date = jsonDict["date"] as? String
-        amount = jsonDict["amount"] as? String
+        amountSent = jsonDict["amountSent"] as? String
+        amountReceived = jsonDict["amountReceived"] as? String
         status = jsonDict["status"] as? String
         rate = jsonDict["rate"] as? String
         timeTaken = jsonDict["timeTaken"] as? String

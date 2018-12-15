@@ -9,23 +9,24 @@
 import Foundation
 
 class SignInPresenter: SignInPresenterProtocol {
-    var view: SignInViewProtocol?
-    var interactor: SignInInteractorProtocol?
-    var wireframe: SignInWireframeProtocol?
- 
-    var transactions: [Transaction]?
     
-    func logInButtonClicked(_ username: String?, _ password: String?) {
-        if let isAuthenticated = interactor?.authenticateUser (username, password), isAuthenticated {
-            interactor?.getTransactions(completion: { [weak self] (transactions) in
-                DispatchQueue.main.async {
-                    self?.wireframe?.presentTransactionListModule(transactions)
-                }
-            }, onError: { (error) in
-                    print(error)
-            })
+    // MARK: - SignInPresenterProtocol Variables
+    var view: SignInViewProtocol?
+    var wireframe: SignInWireframeProtocol?
+    
+    // MARK: - SignInPresenterProtocol method
+    func signInButtonClicked(_ username: String?, _ password: String?) {
+        if isValidUser(username, password) {
+            wireframe?.presentTransactionListModule()
+            print("Success: Signed In")
         } else {
-            print("error: LogIn failed")
+            print("Error: Sign In failed")
+            view?.showErrorMessage(StringConstants.INCORRECT_USERNAME_OR_PASSWORD)
         }
+    }
+    
+    // MARK: - Helper Method
+    func isValidUser(_ username: String?, _ password: String?) -> Bool {
+        return username == "user" && password == "pass"
     }
 }

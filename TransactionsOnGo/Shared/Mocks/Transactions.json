@@ -1,0 +1,24 @@
+
+{
+    "transactions": [{
+                     "transactionId": "VADE0B248932",
+                     "beneficiary": "Friend",
+                     "date": "1/12/2018",
+                     "amountSent": "1,000 GBP",
+                     "amountReceived" : "89,374.23 INR",
+                     "rate": "89.86580",
+                     "timeTaken": "4 mins",
+                     "fee": "- 5.47 GBP",
+                     "savedAmount": "39.00 GBP"
+                     }, {
+                     "transactionId": "ACRAF23DB3C4",
+                     "beneficiary": "Brother",
+                     "date": "20/02/2018",
+                     "amountSent": "200 GBP",
+                     "amountReceived" : "17,966.61 INR",
+                     "rate": "90.50733 GBP",
+                     "timeTaken": "3 mins",
+                     "fee": "- 1.49 GBP",
+                     "savedAmount": "19.79 GBP"
+                     }]
+}
